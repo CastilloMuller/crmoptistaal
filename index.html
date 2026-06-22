@@ -3310,7 +3310,7 @@ function renderFocusCard(l, opts) {
           <div style="font-size:10px;color:var(--beton);margin-top:2px">${l.offertebedrag?kans+'%':'score'}</div>
         </div>
       </div>
-      ${f.notitie ? '<div style="margin-top:10px;padding:8px 10px;background:var(--papier);border-radius:6px;font-size:12px;color:var(--smeedijzer);white-space:pre-wrap;word-break:break-word">'+esc(f.notitie)+'</div>' : ''}
+      ${(() => { const lastN = (l.notities||[]).slice(-1)[0]; if (!lastN) return ''; return '<div style="margin-top:10px;padding:8px 10px;background:var(--papier);border-radius:6px;font-size:12px;color:var(--smeedijzer);white-space:pre-wrap;word-break:break-word"><div style="font-size:10px;color:var(--beton);margin-bottom:4px;font-weight:600">&#128221; '+(lastN.auteur?esc(lastN.auteur)+' &middot; ':'')+esc(formatDate(lastN.datum)||lastN.datum||'')+'</div>'+esc(lastN.inhoud)+'</div>'; })()}
       <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px;gap:8px;flex-wrap:wrap">
         <div style="display:flex;gap:6px;align-items:center">
           ${statusBadge}
