@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+.next/
+
+# Next.js boilerplate (niet nodig voor statische CRM)
+app/
+components/
+components.json
+hooks/
+lib/
+styles/
+prisma/
+personal-crm/
+public/
+eslint.config.mjs
+next-env.d.ts
+next.config.mjs
+next.config.ts
+package*.json
+postcss.config*.mjs
+postcss.config.js
+tailwind.config.ts
+tsconfig.json
+README.md
+
+# Misc
+.env*
+*.log
+.DS_Store
